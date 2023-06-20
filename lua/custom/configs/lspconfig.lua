@@ -21,3 +21,25 @@ lspconfig.gopls.setup {
   },
 }
 
+lspconfig.yamlls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "yml", "yaml", "yaml.docker-compose" },
+  settings = {
+    format = { enable = true },
+    validate = false,
+    completion = true,
+    hover = true,
+    yaml = {
+      schemaStore = {
+        url = "https://www.schemastore.org/api/json/catalog.json",
+        enable = true,
+      },
+      schemas = {
+        ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = { ".gitlab-ci.yml"},
+        kubernetes = "globPattern",
+      },
+    }
+  }
+}
+
