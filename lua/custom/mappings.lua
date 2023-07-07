@@ -36,4 +36,15 @@ M.dap_go = {
   }
 }
 
+M.go = {
+  n = {
+    ["<leader>grn"] = {
+      function ()
+        vim.lsp.buf.rename()
+      end,
+      "Rename Object"
+    },
+  },
+}
+
 return M
