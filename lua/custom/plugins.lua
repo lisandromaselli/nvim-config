@@ -1,10 +1,11 @@
 local plugins = {
   {
     "williamboman/mason.nvim",
-    ops = {
+    opts = {
       ensure_installed = {
         "gopls",
         "yaml-language-server",
+        "solargraph",
       }
     },
   },
