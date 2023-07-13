@@ -4,6 +4,7 @@ local plugins = {
     ops = {
       ensure_installed = {
         "gopls",
+        "yaml-language-server",
       }
     },
   },
