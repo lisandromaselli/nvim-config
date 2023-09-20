@@ -55,5 +55,10 @@ local plugins = {
       },
     }
   },
+  {
+    "iamcco/markdown-preview.nvim",
+     ft = "markdown",
+     lazy = true
+  }
 }
 return plugins
