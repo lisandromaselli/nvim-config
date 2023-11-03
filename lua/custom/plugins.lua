@@ -6,6 +6,7 @@ local plugins = {
         "gopls",
         "yaml-language-server",
         "solargraph",
+        "golangci-lint",
       }
     },
   },
