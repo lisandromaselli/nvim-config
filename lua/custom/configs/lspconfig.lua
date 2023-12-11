@@ -31,7 +31,7 @@ lspconfig.yamlls.setup {
   filetypes = { "yml", "yaml", "yaml.docker-compose" },
   settings = {
     format = { enable = true },
-    validate = false,
+    validate = true,
     completion = true,
     hover = true,
     yaml = {
