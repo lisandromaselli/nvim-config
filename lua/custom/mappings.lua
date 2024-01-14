@@ -36,4 +36,12 @@ M.dap_go = {
   }
 }
 
+M.lspconfig = {
+  plugin = true,
+  n = {
+    ["gr"] = {"<cmd>Telescope lsp_references<CR>", "Telescope Lsp references"},
+    ["<leader>dl"] = {"<cmd>Telescope diagnostics<cr>", "Telescope diagnostics"},
+  },
+}
+
 return M
