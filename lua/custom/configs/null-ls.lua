@@ -26,7 +26,6 @@ local opts = {
     null_ls.builtins.formatting.goimports,
     null_ls.builtins.formatting.rubocop,
     null_ls.builtins.diagnostics.golangci_lint,
-    null_ls.builtins.diagnostics.gospel,
     null_ls.builtins.diagnostics.rubocop,
   },
   on_attach = on_attach,

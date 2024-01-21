@@ -5,8 +5,8 @@ local plugins = {
       ensure_installed = {
         "gopls",
         "yaml-language-server",
-        "solargraph",
         "golangci-lint",
+        "lua-language-server"
       }
     },
   },
@@ -49,8 +49,19 @@ local plugins = {
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = function()
-      return require "custom.configs.treesitter"
+    opts = {
+      ensure_installed = { "c", "vim", "lua", "vimdoc", "go", "gomod" },
+      hightlight = {
+        enable = true,
+        use_languagetree = true,
+        additional_vim_regex_highlighting = true,
+      },
+      indent = { enable = true },
+    },
+    config = function(_, opts)
+      require("nvim-treesitter.install").prefer_git = true
+      dofile(vim.g.base46_cache .. "syntax")
+      require("nvim-treesitter.configs").setup(opts)
     end
   },
   {
