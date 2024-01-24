@@ -8,7 +8,7 @@ M.dap = {
       "Add breakpoint at line"
     },
     ["<leader>dus"] = {
-      function ()
+      function()
         local widgets = require("dap.ui.widgets");
         local sidebar = widgets.sidebar(widgets.scopes);
         sidebar.open();
@@ -22,13 +22,13 @@ M.dap_go = {
   plugin = true,
   n = {
     ["<leader>dgt"] = {
-      function ()
+      function()
         require("dap-go").debug_test()
       end,
       "Debug go test"
     },
     ["<leader>dgl"] = {
-      function ()
+      function()
         require("dap-go").debug_last()
       end,
       "Debug last go test"
@@ -39,9 +39,15 @@ M.dap_go = {
 M.lspconfig = {
   plugin = true,
   n = {
-    ["gr"] = {"<cmd>Telescope lsp_references<CR>", "Telescope Lsp references"},
-    ["<leader>dl"] = {"<cmd>Telescope diagnostics<cr>", "Telescope diagnostics"},
+    ["gr"] = { "<cmd>Telescope lsp_references<CR>", "Telescope Lsp references" },
+    ["<leader>dl"] = { "<cmd>Telescope diagnostics<cr>", "Telescope diagnostics" },
   },
+}
+
+M.lazygit = {
+  n = {
+    ["<leader>gg"] = { "<cmd>LazyGit<cr>", "LazyGit" },
+  }
 }
 
 return M

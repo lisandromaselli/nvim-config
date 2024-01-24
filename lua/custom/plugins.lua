@@ -72,6 +72,10 @@ local plugins = {
     init = function()
       vim.g.mkdp_filetypes = { "markdown" }
     end,
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    lazy = false
   }
 }
 return plugins
